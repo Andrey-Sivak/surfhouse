@@ -1,0 +1,10 @@
+@mixin fface($path, $family, $type: '', $weight, $style: normal) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$path}#{$type}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+
