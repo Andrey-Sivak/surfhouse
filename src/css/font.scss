@@ -1,7 +1,6 @@
 @mixin fface($path, $family, $type: '', $extension, $weight, $style: normal) {
     @font-face {
         font-family: $family;
-        //src: url('#{$path}#{$type}.ttf') format('truetype');
         @if $extension == '' {
           src: url('#{$path}#{$type}.ttf') format('truetype');
         } @else {
@@ -21,4 +20,9 @@ $roboto: 'Roboto';
 
 $raleway: 'Raleway';
 @include fface('#{$dir}/#{$raleway}', $raleway, '-Regular', 'otf', 400);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Bold', 'otf', 700);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-ExtraBold', 'otf', 800);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Heavy', 'otf', 900);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Light', 'otf', 300);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-SemiBold', 'otf', 600);
 
