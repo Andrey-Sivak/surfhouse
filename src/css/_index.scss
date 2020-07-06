@@ -1,0 +1,13 @@
+@import 'mini-cart';
+@import "welcome-banner";
+
+$header-bg-color: #abeafa;
+
+.first-section {
+  padding-bottom: 18px;
+  background-color: $header-bg-color;
+
+  &__content {
+    max-width: 1200px;
+  }
+}

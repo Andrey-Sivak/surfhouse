@@ -1,0 +1,21 @@
+@import 'font.scss';
+
+.welcome-banner {
+  font-family: $raleway;
+  background-color: #fff51f;
+  color: #333;
+  padding: 82px 22px;
+  font-weight: bold;
+
+  &__caption {
+    font-size: 30px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-style: italic;
+    line-height: .85;
+  }
+}
