@@ -1,0 +1,40 @@
+.instagram {
+  margin-top: 25px;
+  margin-bottom: 60px;
+
+  &__feed {
+    text-align: center;
+    margin: 25px auto;
+    padding: 3px 0 8px 38px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: url("../img/inst-black-icon.png");
+    font-family: $roboto;
+    font-size: 22px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333;
+
+    &_link {
+      font-size: 18px;
+      color: #333;
+    }
+  }
+
+  &__photo-wrap {
+    padding: 10px;
+    background-color: #fff;
+    max-width: 185px;
+    box-sizing: border-box;
+    transition: all ease-in .3s;
+
+    &:hover {
+      box-shadow: 0 0 15px #707070;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+.brands {
+  background-color: #bababa;
+  padding: 20px 10px;
+
+  &__item {
+    transition: all ease-in .3s;
+
+    &:hover {
+      box-shadow: 0 0 15px #707070;
+    }
+
+    &_img {
+      max-width: 100%;
+    }
+  }
+}

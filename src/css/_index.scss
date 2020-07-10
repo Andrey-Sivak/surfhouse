@@ -1,13 +1,21 @@
 @import 'mini-cart';
-@import "welcome-banner";
+@import 'welcome-banner';
+@import 'main-slider';
+@import 'menu';
+@import 'catalog';
+@import 'open-banner';
+@import 'brands';
+@import 'inst';
+@import 'main-soc-networks';
 
 $header-bg-color: #abeafa;
 
 .first-section {
-  padding-bottom: 18px;
+  padding-top: 18px;
+  padding-bottom: 66px;
   background-color: $header-bg-color;
+}
 
-  &__content {
-    max-width: 1200px;
-  }
+.main-content {
+  background-color: #f8f8f8;
 }

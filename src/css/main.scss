@@ -1,7 +1,7 @@
-@import 'index';
-
 @import "~bootstrap";
 @import 'font.scss';
+
+@import 'index';
 
 body {
   line-height: 1;
@@ -15,10 +15,6 @@ body {
   background-color: $header-bg-color;
   display: flex;
   padding: 24px 0;
-
-  /*&__content {
-    max-width: 1200px;
-  }*/
 
   &__row {
     display: flex;
