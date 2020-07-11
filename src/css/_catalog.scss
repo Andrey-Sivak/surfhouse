@@ -115,10 +115,11 @@
       padding: 7px 0;
       cursor: pointer;
       transition: all ease-in .3s;
+      font-size: 12px;
 
       &:hover {
         border-bottom-color: #fff;
-        text-decoration: none;
+        color: #fff;
       }
     }
   }
