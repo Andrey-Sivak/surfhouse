@@ -1,0 +1,97 @@
+.footer {
+  background-color: #373737;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  color: #fff;
+  font-family: $roboto;
+
+  &__list {
+    padding-left: 30px;
+
+    &_caption {
+      list-style-type: none;
+      font-family: $raleway;
+      margin-bottom: 27px;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    &_item {
+      list-style-type: none;
+      margin-bottom: 7px;
+      font-size: 12px;
+    }
+    
+    &_link {
+      color: #fff;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__item {
+
+    &_caption {
+      @extend .footer__list_caption;
+      margin-bottom: 8px;
+    }
+
+    &_text {
+      font-size: 12px;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    
+    &_contact {
+
+      &-phone-link {
+        color: #fff;
+      }
+
+      &-email-link {
+        color: $yellow-color;
+      }
+
+      & a:hover {
+        color: inherit;
+      }
+    } 
+  }
+
+  &__form {
+    display: flex;
+    max-width: 250px;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 6px;
+    margin-bottom: 45px;
+
+    &_input {
+      background-color: $yellow-color;
+      padding: 11px 20px;
+      border: none;
+      display: block;
+      width: 100%;
+    }
+
+    &_btn {
+      background-color: #000;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 11px 12px;
+      border: none;
+    }
+  }
+
+  &__pay-systems {
+    margin-left: -8px;
+
+    &_item {
+      max-width: 36px;
+    }
+  }
+}
