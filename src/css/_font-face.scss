@@ -1,0 +1,28 @@
+@mixin fface($path, $family, $type: '', $weight: 400, $svg: '', $style: normal) {
+  @font-face {
+    font-family: $family;
+    @if $svg == '' {
+      // with OTF without SVG and EOT
+      src: url('#{$path}#{$type}.otf') format('opentype'),
+           url('#{$path}#{$type}.woff2') format('woff2'),
+           url('#{$path}#{$type}.woff') format('woff'),
+           url('#{$path}#{$type}.ttf') format('truetype');
+    } @else {
+      // traditional src inclusions
+      src: url('#{$path}#{$type}.eot');
+      src: url('#{$path}#{$type}.eot?#iefix') format('embedded-opentype'),
+           url('#{$path}#{$type}.woff2') format('woff2'),
+           url('#{$path}#{$type}.woff') format('woff'),
+           url('#{$path}#{$type}.ttf') format('truetype'),
+           url('#{$path}#{$type}.svg##{$svg}') format('svg');
+    }
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+$dir: '../fonts/';
+$font: 'Roboto';
+@include fface('#{$dir}#{$font}', $font, '-BlackItalic', 800, '', italic);
+@include fface('#{$dir}#{$font}', $font, '-Regular', '', 400);
+@include fface('#{$dir}#{$font}', $font, '-Bold', '', 700);

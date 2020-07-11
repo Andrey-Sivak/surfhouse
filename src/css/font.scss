@@ -1,0 +1,28 @@
+@mixin fface($path, $family, $type: '', $extension, $weight, $style: normal) {
+    @font-face {
+        font-family: $family;
+        @if $extension == '' {
+          src: url('#{$path}#{$type}.ttf') format('truetype');
+        } @else {
+          src: url('#{$path}#{$type}.#{$extension}') format('truetype');
+        }
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+$dir: '../fonts';
+
+$roboto: 'Roboto';
+@include fface('#{$dir}/#{$roboto}', $roboto, '-Regular', '', 400);
+@include fface('#{$dir}/#{$roboto}', $roboto, '-Bold', '', 600);
+@include fface('#{$dir}/#{$roboto}', $roboto, '-BlackItalic', '', 900, italic);
+
+$raleway: 'Raleway';
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Regular', 'otf', 400);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Bold', 'otf', 700);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-ExtraBold', 'otf', 800);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Heavy', 'otf', 900);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-Light', 'otf', 300);
+@include fface('#{$dir}/#{$raleway}', $raleway, '-SemiBold', 'otf', 600);
+
